@@ -11,6 +11,18 @@ Summary: Requests + Gevent
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/grequests-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/grequests-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/grequests-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/grequests-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/grequests-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/grequests-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/grequests/badges/version.svg)](https://anaconda.org/conda-forge/grequests)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/grequests/badges/downloads.svg)](https://anaconda.org/conda-forge/grequests)
+
 Installing grequests
 ====================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `grequests` available on your plat
 ```
 conda search grequests --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/grequests-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/grequests-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/grequests-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/grequests-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/grequests-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/grequests-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/grequests/badges/version.svg)](https://anaconda.org/conda-forge/grequests)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/grequests/badges/downloads.svg)](https://anaconda.org/conda-forge/grequests)
 
 
 Updating grequests-feedstock
