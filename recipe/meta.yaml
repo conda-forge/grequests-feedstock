@@ -1,26 +1,22 @@
-{%set name = "grequests" %}
-{%set version = "0.3.0" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "0f41c4eee83bab39f5543af49665c08681637a0562a5704a3f7b2e4a996531c9" %}
+{% set version = "0.3.0" %}
 
 package:
-  name: {{ name }}
+  name: grequests
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/g/grequests/grequests-{{ version }}.tar.gz
+  sha256: 0f41c4eee83bab39f5543af49665c08681637a0562a5704a3f7b2e4a996531c9
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 1
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
-
+    - pip
   run:
     - python
     - gevent
