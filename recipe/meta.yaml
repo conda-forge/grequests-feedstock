@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: grequests
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/grequests/grequests-{{ version }}.tar.gz
-  sha256: 0f41c4eee83bab39f5543af49665c08681637a0562a5704a3f7b2e4a996531c9
+  sha256: 8aeccc15e60ec65c7e67ee32e9c596ab2196979815497f85cf863465a1626490
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
 
