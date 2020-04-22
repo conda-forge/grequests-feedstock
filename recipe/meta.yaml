@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: grequests
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/grequests/grequests-{{ version }}.tar.gz
-  sha256: 8aeccc15e60ec65c7e67ee32e9c596ab2196979815497f85cf863465a1626490
+  sha256: 7dec890c6668e6755a1ea968565535867956639301268394d24df67b478df666
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
@@ -27,12 +27,13 @@ test:
     - grequests
 
 about:
-  home: https://github.com/kennethreitz/grequests
-  license: BSD 3-Clause
-  # license_file: No MANIFEST included in package - see https://github.com/kennethreitz/grequests/issues/95
+  home: https://github.com/spyoungtech/grequests
+  license: BSD-3-Clause
+  license_file: LICENSE
   license_family: BSD
   summary: 'Requests + Gevent'
 
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - synapticarbors
