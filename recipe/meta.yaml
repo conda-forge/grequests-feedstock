@@ -1,4 +1,4 @@
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: grequests
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/g/grequests/grequests-{{ version }}.tar.gz
-  sha256: 7dec890c6668e6755a1ea968565535867956639301268394d24df67b478df666
+  sha256: 5c33f14268df5b8fa1107d8537815be6febbad6ec560524d6a404b7778cf6ba6
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -31,7 +31,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   license_family: BSD
-  summary: 'Requests + Gevent'
+  summary: Requests + Gevent
 
 extra:
   recipe-maintainers:
