@@ -5,26 +5,32 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/g/grequests/grequests-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/g/grequests/grequests-{{ version }}.tar.gz
   sha256: 7dec890c6668e6755a1ea968565535867956639301268394d24df67b478df666
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - gevent
     - requests
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pip
   imports:
     - grequests
+  commands:
+    - pip check
 
 about:
   home: https://github.com/spyoungtech/grequests
