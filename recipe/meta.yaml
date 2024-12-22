@@ -17,6 +17,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     - gevent
@@ -25,8 +26,11 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - grequests
+  commands:
+    - pip check
 
 about:
   home: https://github.com/spyoungtech/grequests
